@@ -1,0 +1,11 @@
+@startuml server
+
+left to right direction
+
+(Server) --> (Delegate Thread)
+(Server) --> (Distribute Message)
+(Server) --> (Update Users)
+(Server) --> (Kick User)
+(Server) --> (Auth)
+
+@enduml

@@ -1,0 +1,17 @@
+@startuml server
+
+left to right direction
+
+class Server {
+    -threadPool: ThreadPool
+    +msgLog: List<String>
+    -key: String
+    -users: List<User>
+    
+    +listenForMessages(): void
+    +distributeMessage(msg: Message): void
+    -kick(user: User): void
+    -giveKey(user: User): void
+}
+
+@enduml
