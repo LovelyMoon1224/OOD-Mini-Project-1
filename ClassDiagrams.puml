@@ -1,0 +1,24 @@
+@startuml
+
+class user{
+    +name: String
+    -password: String
+    -chatLog: List<String>
+    -key: String // need to understand AES encryption and decryption.
+    +logout(): void
+    -login(UserName:String, EncyptPass:String): boolean
+    +sendMessage(message: String): void
+    -receiveMessage(message: String): void
+    +encrypt(password: String): String
+    +decrypt(encryptedPassword: String): String
+    
+
+}
+class ClientHandler{
+    -socket: Socket
+    -user: User
+    +handleClient(): void //handles connection and communication with the client.
+    +closeConnection(): void
+}
+
+@enduml
