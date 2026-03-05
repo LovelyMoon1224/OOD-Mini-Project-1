@@ -1,0 +1,22 @@
+@startuml userUseCaseDiagram
+left to right direction
+
+actor "User" as U
+
+rectangle "Client"{
+    usecase "Login" as L1
+    usecase "Logout" as L2
+    usecase "Send Message" as SM
+    usecase "Decrypt Message" as DM
+    usecase "Encrypt Message" as EM
+    usecase "Receive Message" as RM
+}
+
+U --> L1
+U --> L2
+U --> SM
+
+SM --> EM
+RM --> DM
+
+@enduml
